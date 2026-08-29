@@ -40,3 +40,15 @@ export const THEME_LABELS: Record<string, string> = {
   SCIENCE_EXPERIENCE: '과학/체험',
   NIGHT: '야간',
 };
+
+
+// 여행 기간별 추천 장소 개수 범위 (프론트 CourseSearch.jsx의 periodList와 동일한 문자열 사용)
+export const PERIOD_PLACE_RANGE: Record<string, { min: number; max: number }> = {
+  '당일치기': { min: 3, max: 4 },
+  '1박 2일': { min: 4, max: 6 },
+  '2박 3일': { min: 6, max: 9 },
+  '3박 4일': { min: 8, max: 11 },
+  '4박 5일 이상': { min: 10, max: 14 },
+};
+
+export const DEFAULT_PLACE_RANGE = { min: 3, max: 5 };
