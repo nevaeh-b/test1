@@ -629,4 +629,43 @@ export class UsersService {
 
     return url.slice(index + marker.length);
   }
+  async deleteAccount(userId: number) {
+  const client = this.supabaseService.getClient();
+
+  const { data: user, error: findError } = await client
+    .from('web_user')
+    .select('id, profile_image')
+    .eq('id', userId)
+    .maybeSingle();
+
+  if (findError) {
+    throw new Error(findError.message);
+  }
+
+  if (!user) {
+    throw new BadRequestException('존재하지 않는 사용자입니다.');
+  }
+
+  // 프로필 이미지 폴더 전체 삭제 (userId 폴더 안 모든 파일)
+  const { data: files } = await client.storage
+    .from('profile-images')
+    .list(String(userId));
+
+  if (files && files.length > 0) {
+    const filePaths = files.map((f) => `${userId}/${f.name}`);
+    await client.storage.from('profile-images').remove(filePaths);
+  }
+
+  // 계정 삭제 (ON DELETE CASCADE로 연관 데이터 자동 삭제됨)
+  const { error: deleteError } = await client
+    .from('web_user')
+    .delete()
+    .eq('id', userId);
+
+  if (deleteError) {
+    throw new Error(deleteError.message);
+  }
+
+  return { success: true, message: '회원 탈퇴가 완료되었습니다.' };
+}
 }
