@@ -14,6 +14,7 @@ import { UsersModule } from './users/users.module';
 import { StayModule } from './stay/stay.module';
 import { PlaceVisitModule } from './place-visit/place-visit.module';
 import { StampsModule } from './stamps/stamps.module';
+import { PhoneVerificationModule } from './phone-verification/phone-verification.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { StampsModule } from './stamps/stamps.module';
     StayModule,
     PlaceVisitModule,
     StampsModule,
+    PhoneVerificationModule,
   ],
   controllers: [AppController, TestController],
   providers: [AppService],
