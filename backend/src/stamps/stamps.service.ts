@@ -18,40 +18,19 @@ export class StampsService {
 
     const client = this.supabaseService.getClient();
 
-    const { data: existing, error: findError } = await client
+    const { error } = await client
       .from('user_character')
-      .select('id')
-      .eq('user_id', userId)
-      .maybeSingle();
-
-    if (findError) {
-      throw new Error(findError.message);
-    }
-
-    if (existing) {
-      const { error: updateError } = await client
-        .from('user_character')
-        .update({
-          character,
-          assigned_at: new Date().toISOString(),
-        })
-        .eq('id', existing.id);
-
-      if (updateError) {
-        throw new Error(updateError.message);
-      }
-    } else {
-      const { error: insertError } = await client
-        .from('user_character')
-        .insert({
+      .upsert(
+        {
           user_id: userId,
           character,
           assigned_at: new Date().toISOString(),
-        });
+        },
+        { onConflict: 'user_id' },
+      );
 
-      if (insertError) {
-        throw new Error(insertError.message);
-      }
+    if (error) {
+      throw new Error(error.message);
     }
 
     return { character };
