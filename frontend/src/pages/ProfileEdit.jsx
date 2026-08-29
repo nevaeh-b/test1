@@ -62,7 +62,7 @@ export default function ProfileEdit() {
       if (selectedFile) {
         const formData = new FormData();
         if (nickname) formData.append('nickname', nickname);
-        formData.append('file', selectedFile); // 백엔드 Multer 필드명: file
+        formData.append('profileImage', selectedFile); // 백엔드 Multer 필드명: file
 
         res = await fetch('http://localhost:3000/users/profile', {
           method: 'PATCH',
