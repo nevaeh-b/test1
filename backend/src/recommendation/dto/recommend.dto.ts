@@ -29,4 +29,9 @@ export class RecommendDto {
   @IsArray()
   @IsString({ each: true })
   barrierFreeTypes?: string[];
+
+  // 여행 기간: "당일치기" | "1박 2일" | "2박 3일" | "3박 4일" | "4박 5일 이상"
+  @IsOptional()
+  @IsString()
+  period?: string;
 }
