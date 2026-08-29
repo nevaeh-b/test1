@@ -9,6 +9,8 @@ import {
   BARRIER_FREE_TYPE_COLUMN,
   BARRIER_FREE_DETAIL_COLUMNS,
   COMMON_BARRIER_FREE_COLUMNS,
+  PERIOD_PLACE_RANGE,
+  DEFAULT_PLACE_RANGE,
 } from './constants/theme.constant';
 
 @Injectable()
