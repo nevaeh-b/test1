@@ -10,6 +10,7 @@ import {
   UseGuards,
   UseInterceptors,
   Patch,
+  Delete,
 } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 
@@ -148,5 +149,11 @@ export class UsersController {
       dto,
       profileImage,
     );
+  }
+
+   @UseGuards(JwtAuthGuard)
+  @Delete('me')
+  deleteAccount(@Req() req: any) {
+  return this.usersService.deleteAccount(req.user.userId);
   }
 }
