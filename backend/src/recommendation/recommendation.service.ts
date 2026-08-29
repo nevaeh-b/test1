@@ -338,13 +338,20 @@ export class RecommendationService {
       transportation: dto.transportation,
       themes: dto.themes,
       barrierFreeTypes: dto.barrierFreeTypes ?? [],
+      period: dto.period ?? null,
     };
+
+    // 여행 기간에 따라 추천 장소 개수 범위 결정
+    const placeRange = dto.period
+      ? (PERIOD_PLACE_RANGE[dto.period] ?? DEFAULT_PLACE_RANGE)
+      : DEFAULT_PLACE_RANGE;
 
     // 코스 추천 생성
     const recommendedCourse = await this.geminiService.recommendCourse(
       accommodation,
       placesWithCongestion,
       userCondition,
+      placeRange,
     );
 
     // 추천 이력 저장
