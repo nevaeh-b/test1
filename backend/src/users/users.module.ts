@@ -7,11 +7,13 @@ import { UsersService } from './users.service';
 import { JwtStrategy } from './strategies/jwt.strategy';
 import { GeminiModule } from '../gemini/gemini.module';
 import { RewardsModule } from '../rewards/rewards.module';
+import { PhoneVerificationModule } from '../phone-verification/phone-verification.module';
 
 @Module({
   imports: [
     GeminiModule,
     RewardsModule,
+    PhoneVerificationModule,
     MulterModule.register({
       limits: {
         fileSize: 10 * 1024 * 1024, // 10MB
