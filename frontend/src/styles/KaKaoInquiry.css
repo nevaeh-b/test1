@@ -1,0 +1,29 @@
+.kakao-inquiry-container { display: flex; flex-direction: column; gap: 16px; width: 100%; padding: 16px; box-sizing: border-box; }
+
+.kakao-card {
+  display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 28px 20px;
+  background-color: var(--text-white); border: 1px solid var(--border-color); border-radius: var(--radius-card); box-shadow: var(--shadow-soft); text-align: center;
+}
+
+.kakao-info-header { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.inquiry-title { margin: 0; font-weight: 700; font-size: 19px; color: var(--text-main); }
+.inquiry-subtext { margin: 0; font-weight: 400; font-size: 14px; color: var(--text-sub); line-height: 1.5; }
+
+.kakao-connect-btn {
+  display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px; width: 100%; height: 52px;
+  background-color: #FEE500; border: none; border-radius: var(--radius-card); cursor: pointer; box-shadow: var(--shadow-soft); transition: background-color 0.2s ease, transform 0.1s ease;
+}
+.kakao-connect-btn:hover { background-color: #FADA0A; }
+.kakao-connect-btn:active { background-color: #E0C800; transform: scale(0.99); }
+
+.kakao-btn-icon { width: 24px; height: 24px; object-fit: contain; flex-shrink: 0; }
+.kakao-btn-text { font-weight: 700; font-size: 15px; color: var(--text-main); }
+
+.kakao-notice-box { display: flex; flex-direction: column; align-items: center; gap: 14px; width: 100%; padding: 18px 16px; background-color: var(--color-bg-gray); border-radius: var(--radius-card); box-sizing: border-box; }
+.notice-title { margin: 0; font-size: 14px; font-weight: 700; color: var(--text-main); }
+
+.time-info-group { display: flex; flex-direction: column; gap: 8px; width: 100%; }
+.time-chip { display: flex; justify-content: space-between; align-items: center; padding: 10px 14px; background-color: var(--text-white); border-radius: var(--radius-tag); border: 1px solid var(--border-color); }
+.chip-label { font-size: 13px; font-weight: 600; color: var(--text-main); }
+.chip-value { font-size: 13px; font-weight: 500; color: var(--text-sub); }
+.notice-footer-text { margin: 0; font-size: 12px; color: var(--text-sub); line-height: 1.4; word-break: keep-all; }

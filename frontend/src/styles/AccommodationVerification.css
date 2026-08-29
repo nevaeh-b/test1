@@ -1,0 +1,248 @@
+/* 인증 컨테이너 */
+.verification-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin: -16px;
+  background-color: var(--text-main);
+  position: relative;
+}
+
+.analyzing-view {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+/* 상단 */
+.verification-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  z-index: 10;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: var(--text-white);
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.header-tabs {
+  display: flex;
+  gap: 16px;
+}
+
+.tab-item {
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 6px 0;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.tab-item.active {
+  color: var(--text-white);
+}
+
+.tab-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-main);
+  border-radius: 2px;
+}
+
+.header-placeholder {
+  width: 32px;
+}
+
+/* 카메라 뷰파인더 */
+.camera-viewport {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.8) 100%), #222222;
+}
+
+.camera-guide-text {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 13px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+/* 셔터 및 카메라 버튼 */
+.camera-controls {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  margin-bottom: 12px;
+}
+
+.camera-icon-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.camera-icon-btn img {
+  width: 22px;
+  height: 22px;
+  filter: invert(1);
+}
+
+.shutter-btn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 4px solid var(--text-white);
+  background: transparent;
+  padding: 4px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+
+.shutter-btn:active {
+  transform: scale(0.92);
+}
+
+.shutter-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--text-white);
+}
+
+/* 하단 제출 버튼 */
+.action-bar {
+  padding: 16px 20px 24px;
+  background-color: var(--text-main);
+}
+
+.verify-submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: var(--color-main);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius-card);
+  cursor: pointer;
+}
+
+/* 완료 모달 오버레이 */
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 100;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.completion-modal {
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--text-white);
+  border-radius: var(--radius-card);
+  padding: 28px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.modal-emoji {
+  font-size: 36px;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.modal-points {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--color-main);
+}
+
+.modal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.modal-actions .primary-btn {
+  padding: 12px;
+  font-size: 14px;
+  background-color: var(--color-main);
+  color: var(--text-white);
+  border: none;
+  border-radius: var(--radius-tag);
+  cursor: pointer;
+}
+
+.secondary-link-btn {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: var(--text-sub);
+  text-decoration: underline;
+  padding: 8px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}

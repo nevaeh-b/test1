@@ -1,0 +1,28 @@
+.policy-box {
+  background: var(--text-white);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(100vh - 120px);
+  box-shadow: var(--shadow-soft);
+}
+
+.policy-box h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-main);
+  margin: 16px 0 8px 0;
+}
+
+.policy-box h4:first-child {
+  margin-top: 0;
+}
+
+.policy-box p {
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.6;
+  word-break: keep-all;
+  margin: 0;
+}

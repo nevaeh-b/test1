@@ -1,0 +1,22 @@
+.noti-content { padding: 10px 20px 20px; display: flex; flex-direction: column; gap: 25px; }
+
+.nudge-card { background: rgba(71, 116, 184, 0.15); border-radius: 12px; padding: 16px 20px; display: flex; justify-content: space-between; align-items: center; }
+.nudge-info { text-align: left; }
+.nudge-title { color: var(--color-main); font-weight: 700; font-size: 15px; margin-bottom: 4px; }
+.nudge-desc { color: var(--text-main); font-size: 13px; font-weight: 500; }
+
+.toggle-switch { width: 48px; height: 26px; border-radius: 13px; background: var(--text-muted); position: relative; cursor: pointer; transition: background-color 0.2s; flex-shrink: 0; }
+.toggle-switch.active { background: var(--color-sub); }
+.toggle-circle { width: 22px; height: 22px; background: var(--text-white); border-radius: 50%; position: absolute; top: 2px; left: 2px; transition: transform 0.2s; }
+.toggle-switch.active .toggle-circle { transform: translateX(22px); }
+
+.list-section { display: flex; flex-direction: column; gap: 15px; }
+.list-title { font-size: 18px; font-weight: 700; color: var(--text-main); text-align: left; }
+.noti-list { display: flex; flex-direction: column; gap: 15px; }
+
+.noti-card { border: 1px solid var(--border-color); border-radius: 15px; padding: 18px; display: flex; flex-direction: column; gap: 15px; box-shadow: var(--shadow-soft); background: var(--text-white); }
+.card-header { display: flex; align-items: center; justify-content: flex-start; gap: 12px; width: 100%; }
+.dot { width: 32px; height: 32px; background: var(--color-sub); border-radius: 50%; flex-shrink: 0; }
+.card-title { font-weight: 700; font-size: 16px; color: var(--text-main); margin: 0; text-align: left; }
+.card-btn { width: 100%; padding: 12px; background: var(--color-sub); color: var(--text-white); border: none; border-radius: var(--radius-tag); font-weight: 700; font-size: 15px; cursor: pointer; transition: background 0.2s; }
+.card-btn:active { background: var(--color-main); }

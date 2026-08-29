@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>simpleMap</title>
+<script
+	src="https://apis.openapi.sk.com/tmap/vectorjs?version=1&appKey=" + appkey></script>
+<script type="text/javascript">
+	var map;
+	var px;
+	var lonlat;
+	var vector_layer;
+	var point;
+	var pointFeature;
+	
+	// 페이지 로딩 후 호출
+	function initTmap(){
+		// map 생성
+		map = new Tmapv3.Map("map_div", {
+			center : new Tmapv3.LatLng(37.56259379, 126.99243652),
+			width : "100%",	
+			height : "400px",	
+			zoom : 16	// zoom level
+		});
+	 }
+
+	//지도 정보
+	function Info() {
+		var center = map.getCenter(); //map의 중심 좌표 값
+		var level = map.getZoom(); //map의 ZoomLevel 값
+		var extent = map.getBounds(); //map의 영역의 값
+		var result ='지도의 현재 중심좌표는'+center+'이고'+'\n지도의 현재 레벨은'+level+','+'\n지도의 현재 영역값은'+extent+'입니다.'; 
+		var resultDiv = document.getElementById("result");
+		resultDiv.innerHTML = result;
+	}
+</script>
+</head>
+<body onload="initTmap()"><!-- 맵 생성 실행 -->
+	<div id="map_div"></div>
+	<button onClick="Info()">지도 정보보기</button>
+	<p id="result"></p>
+</body>
+</html>

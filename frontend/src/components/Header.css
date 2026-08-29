@@ -1,0 +1,180 @@
+.icon-button {
+  background: none; 
+  border: none; 
+  padding: 4px; 
+  margin: 0; 
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  border-radius: 8px;
+}
+
+.back-button .nav-icon-img {
+  width: 30px !important;
+  height: 40px !important;
+  flex-shrink: 0;      
+  object-fit: contain;   
+}
+
+.back-button { 
+  margin-left: -4px; 
+}
+
+/* 헤더 레이아웃 */
+.app-header {
+  display: flex !important; 
+  align-items: center !important; 
+  justify-content: space-between !important;
+  width: 100% !important;
+  height: 56px; 
+  padding: 0 16px; 
+  background-color: #ffffff;
+  box-sizing: border-box !important;
+}
+
+.app-header .header-left {
+  display: flex !important; 
+  align-items: center !important; 
+  justify-content: flex-start !important; 
+  gap: 8px;
+  flex: 1 !important;
+}
+
+.app-header .header-title {
+  position: static !important;
+  transform: none !important;
+  text-align: left !important; 
+  font-size: 20px; 
+  font-weight: 700; 
+  color: #000; 
+  margin: 0 auto 0 0 !important;
+  white-space: nowrap;
+}
+
+/* 오른쪽 액션 아이콘 영역 */
+.app-header .header-actions { 
+  display: flex !important; 
+  align-items: center !important; 
+  justify-content: flex-end !important;
+  gap: 12px; 
+  flex-shrink: 0 !important; 
+}
+
+/* 포인트 뱃지 스타일 */
+.point-badge { 
+  display: flex; 
+  align-items: center; 
+  gap: 6px; 
+  margin-right: 4px; 
+}
+
+.point-icon {
+  position: static !important; 
+  width: 20px; 
+  height: 20px; 
+  min-width: 20px; 
+  border-radius: 50%;
+  background-color: #004ea1; 
+  color: #ffffff; 
+  font-size: 11px; 
+  font-weight: 800;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  line-height: 1;
+  margin: 0 !important; 
+  box-shadow: none; 
+  filter: none !important;
+}
+
+.point-value {
+  position: static !important; 
+  font-size: 12px; 
+  font-weight: 700;
+  color: var(--text-main) !important; 
+  line-height: 1; 
+  white-space: nowrap; 
+  margin: 0 !important; 
+  text-shadow: none !important;
+}
+
+/* 도움말 모달 */
+.modal-overlay {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.help-modal-content {
+  background: #ffffff;
+  width: 90%;
+  max-width: 380px;
+  border-radius: 16px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  max-height: 80vh;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  box-sizing: border-box;
+}
+
+.help-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 10px;
+}
+
+.help-modal-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #004ea1;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 16px;
+  color: #999;
+}
+
+.help-modal-body {
+  overflow-y: auto;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* 도움말 내부 리스트 스타일 */
+.help-notice-list {
+  padding-left: 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.help-notice-list li {
+  word-break: keep-all;
+}
+
+.help-notice-list ul {
+  padding-left: 16px;
+  margin-top: 4px;
+  margin-bottom: 0;
+  color: #555;
+}

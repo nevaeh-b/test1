@@ -1,0 +1,18 @@
+.settings-list { padding: 16px 20px; display: flex; flex-direction: column; gap: 16px; flex: 1; } 
+.setting-section { display: flex; flex-direction: column; gap: 8px; }
+.setting-group-title { font-size: 16px; font-weight: 700; color: var(--text-main); text-align: left !important; padding-left: 4px; }
+.setting-box { background: var(--text-white); border-radius: 12px; border: 1px solid var(--border-color); overflow: hidden; box-shadow: var(--shadow-soft); }
+
+.setting-item { 
+  display: flex; align-items: center; justify-content: space-between; padding: 14px 16px; 
+  cursor: pointer; background: var(--text-white); border-bottom: 1px solid var(--border-color); 
+  transition: background-color 0.2s ease; 
+}
+.setting-item:last-child { border-bottom: none; }
+.setting-item:active { background-color: var(--color-bg-gray); }
+
+.item-text { font-size: 14px; font-weight: 500; color: var(--text-main); }
+
+.settings-footer { padding: 20px; display: flex; flex-direction: column; gap: 12px; background: transparent; }
+.version-info { display: flex; justify-content: space-between; font-size: 13px; font-weight: 600; color: var(--text-sub); padding: 0 4px; }
+.logout-btn { font-size: 14px; font-weight: 600; color: #ff3b30; cursor: pointer; padding: 10px 4px; text-align: left; }

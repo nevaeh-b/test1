@@ -1,0 +1,30 @@
+.home-container { display: flex; flex-direction: column; gap: 16px; padding: 10px 20px 30px; }
+
+.banner-wrapper { display: flex; flex-direction: column; align-items: center; gap: 8px; width: 100%; }
+.banner-image-slim { width: 100%; height: 110px; border-radius: 12px; object-fit: cover; cursor: pointer; box-shadow: var(--shadow-soft); }
+.banner-dots { display: flex; gap: 6px; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background-color: var(--border-color); cursor: pointer; }
+.dot.active { background-color: var(--color-main); width: 10px; border-radius: 4px; }
+
+.tips-ticker { display: flex; align-items: center; gap: 8px; background-color: var(--color-bg-gray); border-radius: 20px; padding: 8px 16px; cursor: pointer; width: 100%; box-sizing: border-box; }
+.tips-icon { font-size: 14px; color: #ff3b30; }
+.tips-text-container { flex: 1; overflow: hidden; }
+.tips-text { font-size: 13px; font-weight: 600; color: var(--text-main); display: block; white-space: nowrap; animation: fadeIn 0.3s ease-in-out; }
+
+.progress-section { width: 100%; }
+
+.map-preview-section { width: 100%; text-align: left; margin-top: 12px; }
+.map-preview-card { width: 100%; height: 400px; background-color: var(--border-color); border-radius: 12px; padding: 16px; box-sizing: border-box; cursor: pointer; display: flex; flex-direction: column; }
+.map-preview-text { text-align: left; }
+.map-title { font-size: 16px; font-weight: 800; color: var(--text-main); margin: 0 0 12px 0; }
+.map-desc { font-size: 13px; color: var(--text-sub); margin: 0; }
+
+.quick-menu-section { width: 100%; text-align: left; margin-top: 4px; }
+.quick-menu-title { font-size: 16px; font-weight: 800; color: var(--text-main); margin: 0 0 12px 0; }
+.quick-menu-grid { display: flex; justify-content: space-between; gap: 12px; width: 100%; }
+.quick-menu-btn { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 14px 0; background-color: rgba(71, 116, 184, 0.15); border: none; border-radius: 16px; cursor: pointer; transition: opacity 0.2s; }
+.quick-menu-btn:active { opacity: 0.8; }
+.quick-icon { width: 28px; height: 28px; object-fit: contain; }
+.quick-menu-btn span { font-size: 12px; font-weight: 600; color: var(--text-main); }
+
+@keyframes fadeIn { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }

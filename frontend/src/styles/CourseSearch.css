@@ -1,0 +1,36 @@
+/* 서브페이지 헤더 */
+.sub-header { display: flex; align-items: center; gap: 12px; margin-bottom: 0; }
+.sub-title { font-size: 18px; font-weight: 700; color: var(--text-main); }
+
+/* 섹션 공통 */
+.search-section { display: flex; flex-direction: column; gap: 10px; }
+.section-title { font-size: 16px; font-weight: 700; color: var(--text-main); }
+
+/* 통합된 검색 입력창 */
+/* 칩 버튼 공통 (이동수단, 테마, 무장애) */
+.chip-group { display: flex; gap: 8px; }
+.chip-group.scrollable { overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.chip-group.scrollable::-webkit-scrollbar { display: none; }
+.chip-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+
+.chip-btn {
+  display: flex; align-items: center; justify-content: center; gap: 6px;
+  padding: 10px 14px; background-color: var(--text-white);
+  border: 1px solid var(--border-color); border-radius: 20px;
+  font-size: 14px; font-weight: 500; color: var(--text-main); cursor: pointer;
+  box-shadow: var(--shadow-soft); transition: all 0.2s ease; white-space: nowrap;
+}
+.chip-btn.active {
+  color: var(--color-main); border-color: var(--color-main);
+  background-color: var(--color-bg-gray); font-weight: 700;
+}
+.chip-icon { width: 18px; height: 18px; object-fit: contain; }
+
+/* 하단 제출 버튼 */
+.search-submit-btn {
+  width: 100%; height: 52px; background-color: var(--color-main); color: var(--text-white);
+  border: none; border-radius: 12px; font-size: 15px; font-weight: 700;
+  display: flex; align-items: center; justify-content: center; gap: 8px; cursor: pointer; margin-top: 12px;
+}
+.search-submit-btn:active { opacity: 0.9; }
+.btn-icon { width: 16px; height: 16px; filter: brightness(0) invert(1); }

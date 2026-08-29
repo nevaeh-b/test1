@@ -1,0 +1,40 @@
+.faq-container { display: flex; flex-direction: column; gap: 20px; padding: 16px; }
+
+.search-input-box {
+  display: flex; flex-direction: row; align-items: center; width: 100%;
+  background-color: var(--text-white); border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-soft); border-radius: var(--radius-tag); padding: 10px 14px;
+}
+.search-state-layer { display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 100%; }
+.search-text-wrapper { display: flex; align-items: center; flex: 1; }
+.search-input { width: 100%; border: none; outline: none; font-weight: normal; font-size: 15px; color: var(--text-main); background: transparent; }
+.search-input::placeholder { color: var(--text-muted); }
+
+.search-icon-btn { display: flex; align-items: center; background: none; border: none; cursor: pointer; padding: 0; margin-left: 8px; }
+.search-icon-btn img { width: 20px; height: 20px; opacity: 0.6; }
+
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+.predict-card {
+  display: flex; flex-direction: column; gap: 12px; padding: 18px;
+  background-color: var(--text-white); border: 1px solid var(--border-color);
+  border-radius: var(--radius-card); box-shadow: var(--shadow-soft); cursor: pointer; transition: all 0.2s ease-in-out;
+}
+.predict-card:hover { border-color: var(--color-main); }
+
+.faq-header { display: flex; justify-content: space-between; align-items: center; }
+.faq-question-box { display: flex; align-items: center; gap: 10px; }
+.badge-q { font-weight: 700; font-size: 18px; color: var(--color-main); }
+.faq-question { margin: 0; font-size: 15px; font-weight: 600; color: var(--text-main); line-height: 1.4; }
+
+/* 화살표 애니메이션 - SVG/PNG 통일용 */
+.arrow-icon { display: flex; align-items: center; justify-content: center; transition: transform 0.3s ease; }
+.arrow-icon.up { transform: rotate(180deg); }
+.arrow-img { width: 16px; height: 16px; object-fit: contain; display: block; opacity: 0.5; }
+
+/* 답변 영역 */
+.faq-answer-box { display: flex; align-items: flex-start; gap: 10px; padding-top: 12px; border-top: 1px solid var(--border-color); }
+.badge-a { font-weight: 700; font-size: 18px; color: var(--color-sub); }
+.faq-answer { margin: 0; font-size: 14px; color: var(--text-sub); line-height: 1.5; white-space: pre-line; }
+
+.no-result { text-align: center; padding: 40px 0; color: var(--text-muted); font-size: 14px; }

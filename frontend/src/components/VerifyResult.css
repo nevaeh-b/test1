@@ -1,0 +1,113 @@
+.auth-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.auth-modal-card {
+  background: #ffffff;
+  width: 85%;
+  max-width: 340px;
+  border-radius: 16px;
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.result-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.result-icon-circle.success {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.result-icon-circle.fail {
+  background: #ffebee;
+  color: #c62828;
+}
+
+.result-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: #222;
+  margin: 0 0 8px 0;
+}
+
+.result-message {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+  word-break: keep-all;
+}
+
+.result-sub-message {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: -4px;
+  margin-bottom: 12px;
+}
+
+.reward-point-badge {
+  background: #f0f7ff;
+  color: var(--color-main);
+  font-weight: 700;
+  font-size: 15px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.modal-btn-group {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.modal-btn {
+  flex: 1;
+  height: 46px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.confirm-btn {
+  background: var(--color-main);
+  color: #fff;
+}
+
+.retry-btn {
+  background: var(--color-main);
+  color: #fff;
+}
+
+.close-btn {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}

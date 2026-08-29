@@ -1,0 +1,278 @@
+/* 부모 컨테이너 스크롤 락 방지 */
+.evaluation-container {
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* 검색 섹션 래퍼 포지션 */
+.search-section-wrapper {
+  position: relative !important;
+  z-index: 100; /* 드롭다운이 위로 뜨도록 */
+}
+
+/* 검색 드롭다운 고정 레이아웃 */
+.search-results-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  z-index: 999;
+  list-style: none;
+  padding: 4px 0;
+  margin: 6px 0 0 0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  touch-action: manipulation; /* 모바일 터치 스크롤 튐 방지 */
+}
+
+.search-results-dropdown li {
+  padding: 12px 16px;
+  cursor: pointer;
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-results-dropdown li:last-child {
+  border-bottom: none;
+}
+
+.search-results-dropdown li:hover {
+  background-color: #f8f9fa;
+}
+
+.place-name-text {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+.badge-verified {
+  font-size: 11px;
+  color: #004ea1;
+  font-weight: bold;
+  background-color: #eef4ff;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.badge-unverified {
+  font-size: 11px;
+  color: #888;
+  background-color: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.evaluation-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.evaluation-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  gap: 32px;
+  padding-bottom: 20px;
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.question-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.question-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+/* 날짜 */
+.input-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  background-color: var(--text-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-tag);
+  transition: border-color 0.2s ease;
+}
+
+.input-box:focus-within {
+  border-color: var(--color-main);
+}
+
+.input-icon {
+  width: 18px;
+  height: 18px;
+}
+
+.date-picker-input {
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text-main);
+  background: transparent;
+  width: 100%;
+}
+
+/* 혼잡도 */
+.congestion-rating-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--text-white);
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card);
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rating-radio-label {
+  cursor: pointer;
+}
+
+.custom-radio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  background-color: var(--color-bg-gray);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all 0.2s ease;
+}
+
+.custom-radio.selected {
+  border-color: var(--color-main);
+  background-color: var(--color-main);
+  color: var(--text-white);
+  box-shadow: var(--shadow-soft);
+}
+
+.rating-text-labels {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 4px;
+}
+
+.label-text {
+  font-size: 12px;
+  color: var(--text-sub);
+}
+
+/* 웨이팅 */
+.waiting-options-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.waiting-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 16px;
+  background-color: var(--text-white);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-tag);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.waiting-card.active {
+  border-color: var(--color-main);
+  background-color: var(--color-bg-gray);
+  color: var(--text-white);
+}
+
+.checkbox-indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--color-bg-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.waiting-card.active .checkbox-indicator {
+  background-color: var(--color-bg-gray);
+  border-color: var(--color-main);
+}
+
+.check-mark {
+  color: var(--color-main);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.option-text {
+  font-size: 14px;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* 제출 버튼 */
+.submit-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 16px;
+  margin-top: 12px;
+  background-color: var(--color-main);
+  color: var(--text-white);
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-card);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+}
+
+.point-badge-inline {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: var(--color-sub);
+  color: var(--text-white);
+}

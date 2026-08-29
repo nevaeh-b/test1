@@ -1,0 +1,41 @@
+body, html { margin: 0; padding: 0; overflow: hidden; height: 100%; }
+
+.profile-edit-container {
+  width: 100%; max-width: 430px; margin: 0 auto;
+  height: 100vh; overflow: hidden; 
+  background: var(--text-white); display: flex; flex-direction: column; position: relative;
+}
+
+.edit-content { flex: 1; overflow-y: auto; padding: 20px; display: flex; flex-direction: column; gap: 30px; }
+
+.profile-img-section { display: flex; justify-content: center; margin-bottom: 10px; }
+.img-wrapper { position: relative; width: 100px; height: 100px; }
+.profile-pic { width: 100%; height: 100%; border-radius: 20px; object-fit: cover; border: 1px solid var(--border-color); }
+.edit-icon-badge {
+  position: absolute; bottom: -5px; right: -5px; width: 32px; height: 32px;
+  background: var(--text-white); border: 1px solid var(--border-color); border-radius: 50%;
+  display: flex; justify-content: center; align-items: center; cursor: pointer; box-shadow: var(--shadow-soft);
+}
+.edit-icon-badge img { width: 18px; height: 18px; }
+
+.info-list { display: flex; flex-direction: column; gap: 20px; }
+.info-item { display: flex; flex-direction: column; gap: 8px; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; align-items: flex-start; text-align: left; }
+.info-label { color: var(--text-main); font-size: 14px; font-weight: 700; width: 100%; text-align: left; }
+.info-value { font-size: 18px; font-weight: 500; border: none; outline: none; background: transparent; color: var(--text-main); width: 100%; text-align: left; transition: color 0.2s; }
+.info-value:focus { color: var(--color-main); }
+.info-value:disabled { color: var(--text-muted); }
+
+.bottom-btn-area { margin-top: auto; padding: 20px; background: var(--text-white); }
+.submit-btn {
+  width: 100%; height: 52px; background: var(--color-main); color: var(--text-white);
+  font-size: 18px; font-weight: 700; border: none; border-radius: var(--radius-card); cursor: pointer; box-shadow: var(--shadow-soft);
+}
+
+/* 바텀시트 모달 */
+.modal-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); display: flex; justify-content: center; align-items: flex-end; z-index: 999; }
+.bottom-sheet { width: 100%; background: var(--text-white); border-top-left-radius: 20px; border-top-right-radius: 20px; padding: 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 10px; animation: slideUp 0.25s ease-out; }
+.sheet-title { font-size: 16px; font-weight: 700; color: var(--text-sub); text-align: center; margin-bottom: 10px; }
+.sheet-btn { width: 100%; height: 50px; background: var(--color-bg-gray); border: none; border-radius: var(--radius-card); font-size: 16px; font-weight: 600; color: var(--text-main); cursor: pointer; }
+.sheet-btn:active { background: var(--border-color); }
+.cancel-btn { background: var(--text-white); color: #ff3b30; border: 1px solid var(--border-color); margin-top: 5px; }
+@keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }

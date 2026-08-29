@@ -1,0 +1,22 @@
+.signup-profile-container {
+  width: 100%; max-width: 430px; margin: 0 auto;
+  display: flex; flex-direction: column; flex: 1;
+}
+
+.profile-content {
+  flex: 1; display: flex; flex-direction: column; align-items: center; 
+  padding: 0; margin-top: 15px;
+}
+
+.page-title { font-size: 24px; font-weight: 700; margin-top: 80px; color: var(--text-main); }
+
+.profile-img-wrapper { position: relative; width: 180px; height: 180px; margin-top: 30px;}
+.profile-img-placeholder { width: 100%; height: 100%; background: var(--text-muted); border-radius: 30px; overflow: hidden; }
+.preview-img { width: 100%; height: 100%; object-fit: cover; }
+
+.add-photo-btn { position: absolute; bottom: 0; right: 0; width: 50px; height: 50px; background: var(--color-main); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 3px solid var(--text-white); cursor: pointer; }
+.add-photo-btn img { width: 24px; height: 24px; filter: brightness(0) invert(1); }
+
+/* 하단 버튼 화면 꽉 차게 */
+.bottom-btn-area { margin-top: auto; margin-left: -20px; margin-right: -20px; padding: 20px 20px 0 20px; width: calc(100% + 40px); }
+.submit-btn { width: 100%; height: 52px; background: var(--color-main); color: var(--text-white); font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius-card); cursor: pointer; box-shadow: var(--shadow-soft); }

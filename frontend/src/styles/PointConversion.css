@@ -1,0 +1,32 @@
+.point-container { 
+  width: 100%; max-width: 430px; margin: 0 auto; 
+  min-height: 100vh; background: var(--text-white); 
+  display: flex; flex-direction: column; 
+}
+.point-content { padding: 20px; display: flex; flex-direction: column; gap: 30px; }
+
+.my-point-box { 
+  background: rgba(71, 116, 184, 0.1); border-radius: 10px; padding: 20px; 
+  display: flex; justify-content: space-between; align-items: center; 
+}
+.box-title { font-size: 16px; font-weight: 700; color: var(--text-main); }
+.point-value { display: flex; align-items: center; gap: 5px; font-size: 20px; font-weight: 700; color: var(--text-main); }
+.point-icon { width: 20px; height: 20px; }
+
+.input-section { display: flex; flex-direction: column; gap: 10px; }
+.input-title { margin: 0; font-size: 16px; font-weight: 700; color: var(--text-main); }
+.input-wrapper { display: flex; gap: 10px; }
+.point-input { 
+  flex: 1; padding: 12px; border: 1px solid var(--border-color); 
+  border-radius: var(--radius-tag); font-size: 15px; outline: none; 
+}
+.all-btn { 
+  padding: 0 20px; background: var(--color-main); border: none; 
+  color: var(--text-white); border-radius: var(--radius-tag); font-weight: 700; cursor: pointer; 
+}
+
+.divider-bar { width: 100%; height: 6px; background: var(--color-bg-gray); margin: 10px 0; }
+
+.store-section { display: flex; flex-direction: column; }
+.store-header { display: flex; justify-content: space-between; align-items: center; cursor: pointer; padding: 10px 0; }
+.store-title { font-size: 16px; font-weight: 700; color: var(--text-main); }

@@ -1,0 +1,28 @@
+.notice-list {
+  background: var(--text-white);
+  border-top: 1px solid var(--border-color);
+}
+
+.notice-item {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--text-white);
+  transition: background-color 0.2s ease;
+}
+
+.notice-item:active {
+  background-color: var(--color-bg-gray);
+}
+
+.notice-title {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.notice-date {
+  font-size: 12px;
+  color: var(--text-muted);
+}

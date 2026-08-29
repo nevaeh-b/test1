@@ -1,0 +1,76 @@
+.sub-setting-container {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background: var(--color-bg-gray);
+  display: flex;
+  flex-direction: column;
+}
+
+.setting-content {
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+}
+
+.setting-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.setting-group-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-main);
+  padding-left: 4px;
+  text-align: left;
+}
+
+.setting-box {
+  background: var(--text-white);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  cursor: pointer;
+  background: var(--text-white);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.setting-item:last-child {
+  border-bottom: none;
+}
+
+.setting-item:not(.non-clickable):active {
+  background-color: var(--color-bg-gray);
+}
+
+.item-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.item-value {
+  font-size: 14px;
+  color: var(--text-sub);
+}
+
+.text-danger {
+  color: #ff3b30;
+}
+
+.text-gray {
+  color: var(--text-muted);
+}

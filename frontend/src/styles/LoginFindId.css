@@ -1,0 +1,32 @@
+/* 비밀번호찾기는 .find-container 대신 .find-pw-container 를 사용하세요 */
+.find-container { 
+  width: 100%; max-width: 430px; margin: 0 auto; 
+  background: var(--text-white); display: flex; flex-direction: column; flex: 1; padding: 20px; 
+}
+
+.form-content { padding: 15px 20px 20px; display: flex; flex-direction: column; gap: 24px; margin-top: -5px; }
+
+.tab-group { display: flex; border-bottom: 2px solid var(--border-color); margin-bottom: 10px; }
+.tab { flex: 1; text-align: center; padding-bottom: 10px; font-size: 16px; font-weight: 700; color: var(--text-muted); cursor: pointer; }
+.tab.active { color: var(--color-main); border-bottom: 3px solid var(--color-main); margin-bottom: -2px; }
+
+.single-input-group .input-field { width: 100%; border: none; border-bottom: 1px solid var(--border-color); padding: 10px 0; font-size: 14px; outline: none; transition: border-color 0.2s; color: var(--text-main); background: transparent; }
+.single-input-group .input-field:focus { border-bottom: 2px solid var(--color-main); }
+
+.input-group-row { display: flex; align-items: center; gap: 12px; width: 100%; }
+.input-group-row .input-field { flex: 1; border: none; border-bottom: 1px solid var(--border-color); padding: 10px 0; font-size: 14px; outline: none; background: transparent; transition: border-color 0.2s; color: var(--text-main); }
+.input-group-row .input-field::placeholder { color: var(--text-muted); }
+.input-group-row .input-field:focus { border-bottom: 2px solid var(--color-main); }
+
+.input-group-row .auth-btn, .auth-btn { height: 50px; padding: 0 16px; background: var(--text-white); color: var(--color-main); border: 1.5px solid var(--color-main); border-radius: var(--radius-tag); font-size: 14px; font-weight: 700; cursor: pointer; white-space: nowrap; transition: all 0.2s; }
+.input-group-row .auth-btn:active, .auth-btn:active { background: var(--color-bg-gray); }
+.input-group-row .auth-btn.sent { background: var(--color-bg-gray); border-color: var(--border-color); color: var(--text-sub); }
+.input-group-row .auth-btn:disabled, .auth-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.input-with-timer { position: relative; flex: 1; }
+.input-with-timer .input-field { width: 100%; padding-right: 50px; }
+.timer-text { position: absolute; right: 8px; top: 50%; transform: translateY(-50%); color: #ff3b30; font-size: 13px; font-weight: 600; pointer-events: none; }
+
+.submit-btn { margin-top: 20px; width: 100%; height: 52px; background: var(--text-muted); color: var(--text-white); font-size: 16px; font-weight: 700; border: none; border-radius: var(--radius-card); cursor: not-allowed; transition: background-color 0.2s; box-shadow: none; }
+.submit-btn.active { background: var(--color-main); cursor: pointer; box-shadow: var(--shadow-soft); }
+.submit-btn.active:active { background: var(--color-sub); }

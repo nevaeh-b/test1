@@ -1,0 +1,79 @@
+.noti-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-card, 16px);
+  padding: 16px 20px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.noti-card.disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* 뱃지 + 제목 */
+.noti-card-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.noti-badge {
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+/* 뱃지 타입별 색상 */
+.badge-rating { background-color: #e3f2fd; color: #1976d2; }
+.badge-congestion { background-color: #fff3e0; color: #f57c00; }
+.badge-night { background-color: #f3e5f5; color: #7b1fa2; }
+.badge-event { background-color: #e8f5e9; color: #388e3c; }
+.badge-stay { background-color: #e0f2f1; color: #00796b; }
+.badge-default { background-color: #eee; color: #666; }
+
+.noti-card-title {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-main);
+  word-break: keep-all;
+}
+
+/* 메시지 */
+.noti-card-message {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text-sub);
+  line-height: 1.45;
+  word-break: keep-all;
+}
+
+/* 액션 버튼 */
+.noti-card-btn {
+  width: 100%;
+  height: 42px;
+  margin-top: 4px;
+  background-color: var(--color-main);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: var(--radius-card, 12px);
+  cursor: pointer;
+  box-shadow: var(--shadow-soft);
+  transition: opacity 0.2s;
+}
+
+.noti-card-btn:disabled {
+  background-color: var(--text-sub);
+  cursor: not-allowed;
+  box-shadow: none;
+}
