@@ -38,6 +38,21 @@ export class UsersService {
       throw new ConflictException('이미 가입된 이메일입니다.');
     }
 
+        if (!dto.phoneNumber) {
+      throw new BadRequestException('휴대폰 번호가 필요합니다.');
+    }
+
+    const { data: existingPhone } = await this.supabaseService
+      .getClient()
+      .from('web_user')
+      .select('id')
+      .eq('phone_number', dto.phoneNumber)
+      .maybeSingle();
+
+    if (existingPhone) {
+      throw new ConflictException('이미 가입된 휴대폰 번호입니다.');
+    }
+
     const passwordHash = await bcrypt.hash(dto.password, 10);
 
     // 기본 계정 생성
@@ -48,13 +63,17 @@ export class UsersService {
         nickname: dto.nickname,
         email: dto.email,
         password_hash: passwordHash,
+        phone_number: dto.phoneNumber,
         provider: 'LOCAL',
         reward_balance: 0,
       })
       .select('id, nickname, email')
       .single();
-
+      
     if (error) {
+      if (error.code === '23505') {
+        throw new ConflictException('이미 가입된 이메일 또는 휴대폰 번호입니다.');
+      }
       throw new Error(error.message);
     }
 
@@ -540,10 +559,6 @@ export class UsersService {
 
     const removeRequested = dto.removeProfileImage === 'true';
     const updates: Record<string, any> = {};
-
-    if (dto.nickname && dto.nickname.trim().length > 0) {
-      updates.nickname = dto.nickname.trim();
-    }
 
     if (file) {
       // 신규 이미지 업로드 및 기존 이미지 파일 삭제
