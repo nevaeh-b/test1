@@ -151,9 +151,19 @@ export class UsersController {
     );
   }
 
-   @UseGuards(JwtAuthGuard)
+  @UseGuards(JwtAuthGuard)
   @Delete('me')
   deleteAccount(@Req() req: any) {
   return this.usersService.deleteAccount(req.user.userId);
   }
+
+  @Post('social-signup/complete')
+  completeSocialSignup(
+  @Body() body: { pendingToken: string; phoneNumber: string },
+) {
+  return this.usersService.completeSocialSignup(
+    body.pendingToken,
+    body.phoneNumber,
+  );
+}
 }
